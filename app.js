@@ -1,7 +1,7 @@
 // We can create any number of elments with React
 const heading = React.createElement(
   "h1",
-  { style: { color: "red" } },
+  { style: { color: "red" }, className: "text-green" },
   "Hello World from React!"
 );
 
@@ -11,4 +11,6 @@ const heading = React.createElement(
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // Now we have to render ---------- render means display
+// heading here retuns Javascript object
+// render method is reposible to convert object to html element and add it to DOM  
 root.render(heading);
