@@ -6,9 +6,7 @@
 
 // React.createElement (Object) => Object => with render method => it is converted to => HTML(Browser Understands)
 
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
+const parent = React.createElement("div", { id: "parent" }, [
   React.createElement("div", { id: "child" }, [
     React.createElement(
       "h1",
@@ -20,8 +18,20 @@ const parent = React.createElement(
       { style: { color: "red" } },
       "This is Child Div H2 Tag Data"
     ),
-  ])
-);
+  ]),
+  React.createElement("div", { id: "child2" }, [
+    React.createElement(
+      "h1",
+      { className: "text-green" },
+      "This is Child Div H1 Tag Data"
+    ),
+    React.createElement(
+      "h2",
+      { style: { color: "red" } },
+      "This is Child Div H2 Tag Data"
+    ),
+  ]),
+]);
 
 // We can create any number of elments with React
 const heading = React.createElement(
